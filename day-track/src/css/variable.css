@@ -1,0 +1,53 @@
+/* variables.css - Root Variables for Themes */
+
+/* Fonts */
+:root {
+    --font-title: 'Lobster', cursive;
+    --font-subtitle: 'Poppins', sans-serif;
+
+    /* Day Theme - Morning */
+    --day-bg: linear-gradient(
+        180deg,
+        #FFF 0%,
+        #FAE890 14%,
+        #F6D841 24%,
+        #F3CD0A 34%,
+        #EBB40E 49.5%,
+        #E6A411 64.5%,
+        #F09011 79%,
+        #F78311 89%,
+        #FF7411 100%
+    );
+    --day-text: #333;
+
+    /* Evening Theme */
+    --evening-bg: linear-gradient(
+        180deg,
+        #F6A93E 0%,
+        #ED3229 16%,
+        #D93042 32%,
+        #CC2E53 43%,
+        #C12C61 52%,
+        #AD2A7B 59%,
+        #8925AA 81%,
+        #6B2A81 89.5%,
+        #512F5C 97%
+    );
+    --evening-text: #f1c3c3;
+
+    /* Night Theme */
+    --night-bg: linear-gradient(
+        180deg,
+        #6C1EF3 0%,
+        #411B83 26%,
+        #3C1B76 44%,
+        #371B68 64%,
+        #2E1A50 75%,
+        #19181A 100%
+    );
+    --night-text: #f0f0f0;
+}
+
+
+
+

@@ -1,0 +1,96 @@
+@import url(variable.css);
+/* General Reset */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.5s ease;
+}
+
+.day-mode {
+    background: var(--day-bg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.evening-mode {
+    background: var(--evening-bg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.night-mode {
+    background: var(--night-bg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* Header Styling */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    transition: all 0.5s ease;
+}
+
+.title {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    font-family: var(--font-subtitle);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+/* Theme Buttons */
+.theme-buttons button {
+    background: none; 
+    border: none; 
+    padding: 8px;
+    font-size: 1.8rem; 
+    cursor: pointer;
+    transition: transform 0.2s ease; 
+}
+
+.theme-buttons button:hover {
+    transform: scale(1.1); 
+}
+
+.night-mode .header, 
+.night-mode .title, 
+.night-mode .subtitle {
+    color: var(--night-text);
+}
+
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .theme-buttons {
+        margin-top: 10px;
+    }
+
+    .theme-buttons button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
