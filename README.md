@@ -1,7 +1,3 @@
-Here's a fun and emoji-filled **`README.md`** for your practice project:
-
----
-
 # 🌞🌗🌙 **Day Track**
 
 Welcome to **Day Track** – a project where I practice my ✨**JavaVanilla JS**✨ skills along with some spicy 🌶️ CSS styling and 💪 Git magic. It's all about **staying on track** from sunrise to sunset! 🌄
