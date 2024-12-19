@@ -1,6 +1,10 @@
 @import url(variable.css);
+
 /* General Reset */
-body, h1, p, button {
+body,
+h1,
+p,
+button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -49,22 +53,23 @@ body {
     font-size: 1.2rem;
     font-weight: 300;
 }
+
 /* Theme Buttons */
 .theme-buttons button {
-    background: none; 
-    border: none; 
+    background: none;
+    border: none;
     padding: 8px;
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     cursor: pointer;
-    transition: transform 0.2s ease; 
+    transition: transform 0.2s ease;
 }
 
 .theme-buttons button:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
 }
 
-.night-mode .header, 
-.night-mode .title, 
+.night-mode .header,
+.night-mode .title,
 .night-mode .subtitle {
     color: var(--night-text);
 }
@@ -92,5 +97,34 @@ body {
     .theme-buttons button {
         padding: 6px 12px;
         font-size: 0.9rem;
+    }
+}
+
+/* Basic star appearance */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+/* Twinkling animation */
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
     }
 }
