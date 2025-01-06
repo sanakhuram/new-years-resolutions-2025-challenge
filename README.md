@@ -1,65 +1,57 @@
-# 🌞🌗🌙 **Day Track**
+# 🥂 New Year's Resolutions 2025
 
-Welcome to **Day Track** – a project where I practice my ✨**JavaVanilla JS**✨ skills along with some spicy 🌶️ CSS styling and 💪 Git magic. It's all about **staying on track** from sunrise to sunset! 🌄
+A vibrant, interactive webpage to track and celebrate your New Year's resolutions! This project was created for the [SheCodes New Year’s Resolutions Challenge](https://www.shecodes.io/contests/new-year-s-resolutions-challenge). 🎉✨
 
----
+## 🌟 Features
 
-## 🛠️ **What’s Inside?**
+- **🎨 Dynamic Design:** A responsive layout with a gradient animation that adapts to different devices.
+- **✅ Interactive Checklist:** Each resolution includes a checklist for tracking progress.
+- **💡 Engaging UI Elements:** Hover effects and buttons for a modern, user-friendly experience.
+- **🗂️ Resolution Categories:**
+  - 🧘‍♀️ **Prioritize Mental Health**
+  - 🏃‍♂️ **Stay Physically Active**
+  - 💰 **Improve Financial Habits**
+  - 🥗 **Eat Healthier**
+  - 📚 **Learn Something New**
+  - 📵 **Reduce Screen Time**
+  - ✈️ **Travel More**
+  - 🗃️ **Be More Organized**
 
-### 🌈 **Color Themes**
-- **Day Mode**: 🌞 Fresh and bright, like a summer morning! 
-- **Evening Mode**: 🌆 Warm hues, just like the golden hour.
-- **Night Mode**: 🌚 Dark and cozy, perfect for night owls.
+## 🛠️ Technologies Used
 
-### 💃 **Styling**
-- Smooth transitions 🎢, responsive designs 📱, and a fancy GIF logo 🎥 that blends with the background like magic 🪄.
+- **📜 HTML5:** For structure and semantic elements.
+- **🎨 CSS3:** For animations, gradients, and styling.
+- **💻 JavaScript:** To handle interactivity like the checklist and back-to-top button.
+- **⭐ Font Awesome:** For icons enhancing visual appeal.
 
-### 🖱️ **Theme Buttons**
-- **🌝**: Switch to Day Mode
-- **🌗**: Switch to Evening Mode
-- **🌚**: Switch to Night Mode
-- Press 'em! It’s oddly satisfying. 😌
+## 📸 Screenshots
+ 
+*A sneak peek of the webpage design.*
 
----
+## 🚀 Getting Started
 
-## 🤹 **Features**
-1. 🎨 Dynamic theme changes with **JavaScript**.
-2. 📐 Responsive design for all screen sizes.
-3. 🖌️ Variable-based color theming (`CSS Variables FTW!` 🎉).
-4. 🎥 GIF logo that adjusts to the theme for extra ✨ pizzazz.
-
----
-
-## 👩‍💻 **How I Built It**
-- **HTML**: A simple but solid structure! 🏗️
-- **CSS**: Flexbox, media queries, and buttery smooth transitions. 🧈
-- **JavaScript**: Vanilla JS to keep it lightweight and sweet. 🍦
-- **Git**: Commit logs full of 😂 emojis and fun descriptions.
-
----
-
-## 🔧 **Getting Started**
-1. Clone this repo like a pro:
+1. 🛠️ Clone the repository:
    ```bash
-   git clone https://github.com/your-username/day-track.git
+   git clone https://github.com/yourusername/new-years-resolutions-2025.git
    ```
-2. Open `index.html` in your browser and watch the magic unfold. 🪄✨
+2. 📂 Navigate to the project directory:
+   ```bash
+   cd new-years-resolutions-2025
+   ```
+3. 🌐 Open `index.html` in your browser to view the webpage.
 
----
+## 📚 Learn More
 
-## 📜 **Git Commit Logs**
-Here’s how I rolled:
-- **feat**: Added fun features like themes and buttons 🎉
-- **fix**: Squashed bugs 🪲 (not real bugs, ew!)
-- **chore**: Cleaned up the code like Marie Kondo 🧹
-- **refactor**: Polished everything till it sparkled ✨
-- **test**: Tried things and hoped they worked. 🤞
+- 🌟 [SheCodes New Year’s Resolutions Challenge](https://www.shecodes.io/contests/new-year-s-resolutions-challenge)
+- 🌐 [Portfolio of the Developer](https://portfolio-sanakh.netlify.app/)
 
+## 🙌 Acknowledgements
 
-## 🎯 **Goals**
-This project is for:
-- Practicing **JavaScript basics**.
-- Improving my **styling skills**.
-- Learning how to make proper **Git commits** while having fun. 😜
+- 💖 **SheCodes.io** for inspiring the challenge.
+- 📸 **Pexels** for the background and category images.
+- 🎨 **Font Awesome** for the free icons.
 
----
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE). 📜
+```
