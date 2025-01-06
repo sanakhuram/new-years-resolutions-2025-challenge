@@ -32,7 +32,7 @@ A vibrant, interactive webpage to track and celebrate your New Year's resolution
 
 1. 🛠️ Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/new-years-resolutions-2025.git
+   git clone https://github.com/sanakhuram/new-years-resolutions-2025-challenge.git
    ```
 2. 📂 Navigate to the project directory:
    ```bash
