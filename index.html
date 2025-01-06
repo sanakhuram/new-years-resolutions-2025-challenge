@@ -12,7 +12,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #50c878, #227f8b, #6a0dad, #f9a602);
+            background: linear-gradient(135deg, #a046d4, #8b4922, #6a0dad, #f9a602, #f9a602);
             background-size: 400% 400%;
             animation: gradient 8s ease infinite;
             color: white;
@@ -35,10 +35,10 @@
         header {
             text-align: center;
             padding: 20px;
-            background-image: url('https://images.pexels.com/photos/137219/pexels-photo-137219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/1600x900/?new-year');
+            background-image: url('https://images.pexels.com/photos/11208661/pexels-photo-11208661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/1600x900/?new-year');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: rgb(248, 242, 242);
         }
 
         header h1 {
@@ -209,10 +209,12 @@
             transition: background 0.3s ease, transform 0.3s ease;
         }
 
-        button:hover {
-            background: #6a0dad;
-            transform: scale(1.05);
-        }
+button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  background: linear-gradient(45deg, #f9a602, #ff7eb3);
+}
+
+
 
         @media screen and (max-width: 480px) {
             .resolution {
@@ -239,6 +241,9 @@
             #popup button {
                 padding: 8px 12px;
                 font-size: 0.8em;
+            }
+            header h1{
+                font-size: 20px;
             }
         }
 
@@ -270,6 +275,71 @@
             background: #222;
             color: white;
         }
+        .bubble-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    z-index: -1; /* Ensure bubbles appear behind the bio content */
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #ffafcc, #ffc8dd, #bde0fe);
+    border-radius: 50%;
+    animation: float 5s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+.bubble:nth-child(2) {
+    width: 30px;
+    height: 30px;
+    left: 25%;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+    width: 25px;
+    height: 25px;
+    left: 50%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+    width: 35px;
+    height: 35px;
+    left: 75%;
+    animation-duration: 8s;
+    animation-delay: 3s;
+}
+
+.bubble:nth-child(5) {
+    width: 15px;
+    height: 15px;
+    left: 10%;
+    animation-duration: 4s;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-400px) scale(1.2);
+        opacity: 0;
+    }
+}
+
     </style>
 </head>
 
@@ -279,16 +349,24 @@
     </header>
 
     <div class="layout">
-        <div class="bio">
-            <img src="/sana.jpg" alt="Sana Khuram" />
-            <h2>About Me <i class="fas fa-user"></i></h2>
-            <p>
-                <strong>Sana Khuram</strong>,
-                <i class="fas fa-laptop-code"></i> Front-end developer from Trondheim,
-                Norway...
-            </p>
-            <a href="https://portfolio-sanakh.netlify.app/" target="_blank">Visit My Profile</a>
-        </div>
+<div class="bio">
+    <div class="bubble-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    <img src="/sana.jpg" alt="Sana Khuram" />
+    <h2>About Me <i class="fas fa-user"></i></h2>
+    <p>
+        <strong>Sana Khuram</strong>, a passionate <i class="fas fa-laptop-code"></i> Front-end developer from
+        Trondheim, Norway.
+    </p>
+    <a href="https://portfolio-sanakh.netlify.app/" target="_blank">Visit My Profile</a>
+    
+</div>
+
 
         <div class="resolutions">
             <div class="resolution">
@@ -416,7 +494,7 @@
         <button onclick="closePopup()">Done</button>
     </div>
 
-    <button id="back-to-top" onclick="scrollToTop()">&#8679;</button>
+    <button id="back-to-top" onclick="scrollToTop()">🌸</button>
 
     <footer>
         <p>© 2025 by Sana Khuram. All Rights Reserved.</p>
