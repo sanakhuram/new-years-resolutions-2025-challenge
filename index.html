@@ -2,32 +2,515 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Day Track</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assests/favicon-32x32.png" />
-    <link rel="stylesheet" href="/day-track/src/css/styles.css" />
-    <script type="module" src="/day-track/src/js/script.mjs"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;600&display=swap"
-        rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Year's Resolutions 2025</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #50c878, #227f8b, #6a0dad, #f9a602);
+            background-size: 400% 400%;
+            animation: gradient 8s ease infinite;
+            color: white;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-image: url('https://images.pexels.com/photos/137219/pexels-photo-137219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/1600x900/?new-year');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+        }
+
+        .layout {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .bio {
+            flex: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            margin-right: 20px;
+            text-align: center;
+        }
+
+        .bio img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .bio h2 {
+            margin-bottom: 10px;
+        }
+
+        .bio p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .bio a {
+            color: #f9a602;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .resolutions {
+            flex: 2;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .resolution {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .resolution:hover {
+            transform: scale(1.05);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .resolution img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .resolution h2 {
+            margin-bottom: 10px;
+        }
+
+        .resolution p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/400x300/?checklist,planning');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            font-weight: bold;
+        }
+
+        #popup h2 {
+            margin: 0 0 10px 0;
+        }
+
+        #popup ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        #popup ul li {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        #popup ul li input {
+            margin-right: 10px;
+        }
+
+        #popup button {
+            background: #f9a602;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+
+        #popup button:hover {
+            background: #6a0dad;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .layout {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .bio {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        button {
+            background: #f9a602;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background: #6a0dad;
+            transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 480px) {
+            .resolution {
+                padding: 15px;
+            }
+
+            .resolution h2 {
+                font-size: 1.2em;
+            }
+
+            .resolution p {
+                font-size: 0.9em;
+            }
+
+            .bio p {
+                font-size: 0.9em;
+            }
+
+            #popup {
+                width: 90%;
+                padding: 15px;
+            }
+
+            #popup button {
+                padding: 8px 12px;
+                font-size: 0.8em;
+            }
+        }
+
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #6a0dad;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            font-size: 1.5em;
+        }
+
+        #back-to-top:hover {
+            background: #f9a602;
+        }
+
+        button:focus,
+        a:focus {
+            outline: 3px dashed #f9a602;
+            outline-offset: 2px;
+        }
+
+        .dark-mode {
+            background: #222;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
-<header class="header">
-    <div class="text-container">
-        <h1 class="title">Day Track</h1>
-        <p class="subtitle">From sunrise to sunset, stay on track</p>
-    </div>
-    <div class="stars"></div>
-    <div class="theme-buttons">
-        <button id="dayButton" aria-label="Day Mode">🌝</button>
-        <button id="eveningButton" aria-label="Evening Mode">🌗</button>
-        <button id="nightButton" aria-label="Night Mode">🌚</button>
-    </div>
-</header>
+    <header>
+        <h1>🥂 Cheers to New Beginnings: 2025 Resolutions</h1>
+    </header>
 
+    <div class="layout">
+        <div class="bio">
+            <img src="/sana.jpg" alt="Sana Khuram" />
+            <h2>About Me <i class="fas fa-user"></i></h2>
+            <p>
+                <strong>Sana Khuram</strong>,
+                <i class="fas fa-laptop-code"></i> Front-end developer from Trondheim,
+                Norway...
+            </p>
+            <a href="https://portfolio-sanakh.netlify.app/" target="_blank">Visit My Profile</a>
+        </div>
+
+        <div class="resolutions">
+            <div class="resolution">
+                <h2>
+                    <i class="fas fa-brain"></i>
+                    <a href="https://www.healthline.com/mental-health" target="_blank">Prioritize Mental Health</a>
+                </h2>
+                <img src="https://images.pexels.com/photos/1051838/pexels-photo-1051838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?meditation,nature"
+                    alt="Mental Health" />
+                <p>
+                    Dedicate time to self-care, meditation, or therapy to nurture mental
+                    well-being.
+                </p>
+                <button onclick="openChecklist('Prioritize Mental Health')">
+                    Checklist
+                </button>
+            </div>
+            <div class="resolution">
+                <h2>
+                    <i class="fas fa-running"></i>
+                    <a href="https://www.cdc.gov/physicalactivity/basics/index.htm" target="_blank">Stay Physically
+                        Active</a>
+                </h2>
+                <img src="https://images.pexels.com/photos/11497457/pexels-photo-11497457.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?exercise,fitness"
+                    alt="Physical Activity" />
+                <p>
+                    Commit to a regular fitness routine for a healthier and more
+                    energetic life.
+                </p>
+                <button onclick="openChecklist('Stay Physically Active')">
+                    Checklist
+                </button>
+            </div>
+            <div class="resolution">
+                <h2>
+                    <i class="fas fa-piggy-bank"></i>
+                    <a href="https://www.ramseysolutions.com/budgeting" target="_blank">Improve Financial Habits</a>
+                </h2>
+                <img src="https://images.pexels.com/photos/5980927/pexels-photo-5980927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?finance,money"
+                    alt="Financial Habits" />
+                <p>
+                    Budget effectively, save consistently, and work toward financial
+                    goals.
+                </p>
+                <button onclick="openChecklist('Improve Financial Habits')">
+                    Checklist
+                </button>
+            </div>
+            <div class="resolution">
+                <h2>
+                    <i class="fas fa-apple-alt"></i>
+                    <a href="https://www.eatright.org/" target="_blank">Eat Healthier</a>
+                </h2>
+                <img src="https://images.pexels.com/photos/28645472/pexels-photo-28645472/free-photo-of-preparing-homemade-pickled-vegetables-in-jar.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?healthy-food"
+                    alt="Healthy Food" />
+                <p>
+                    Incorporate nutritious meals into daily routines to support overall
+                    health.
+                </p>
+                <button onclick="openChecklist('Eat Healthier')">Checklist</button>
+            </div>
+            <div class="resolution">
+                <h2>
+                    <i class="fas fa-lightbulb"></i>
+                    <a href="https://www.coursera.org/" target="_blank">Learn Something New</a>
+                </h2>
+                <img src="https://images.pexels.com/photos/4126126/pexels-photo-4126126.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?learning,books"
+                    alt="Learning" />
+                <p>
+                    Explore new skills or hobbies to expand your knowledge and
+                    creativity.
+                </p>
+                <button onclick="openChecklist('Learn Something New')">
+                    Checklist
+                </button>
+            </div>
+            <div class="resolution">
+                <h2>
+                    <i class="fas fa-mobile-alt"></i>
+                    <a href="https://www.nytimes.com/guides/well/reduce-screen-time" target="_blank">Reduce Screen
+                        Time</a>
+                </h2>
+                <img src="https://images.pexels.com/photos/10476515/pexels-photo-10476515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?nature,outdoors"
+                    alt="Screen Time Reduction" />
+                <p>
+                    Spend less time on devices to focus on meaningful activities and
+                    connections.
+                </p>
+                <button onclick="openChecklist('Reduce Screen Time')">
+                    Checklist
+                </button>
+            </div>
+            <div class="resolution">
+                <h2>
+                    <i class="fas fa-plane"></i>
+                    <a href="https://www.lonelyplanet.com/" target="_blank">Travel More</a>
+                </h2>
+                <img src="https://images.pexels.com/photos/3716850/pexels-photo-3716850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?travel,destination"
+                    alt="Travel" />
+                <p>
+                    Explore new places and experiences to broaden perspectives and enjoy
+                    life.
+                </p>
+                <button onclick="openChecklist('Travel More')">Checklist</button>
+            </div>
+            <div class="resolution">
+                <h2>
+                    <i class="fas fa-tasks"></i>
+                    <a href="https://www.marieclaire.com/home/a29832275/how-to-be-organized/" target="_blank">Be More
+                        Organized</a>
+                </h2>
+                <img src="https://images.pexels.com/photos/5546851/pexels-photo-5546851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?organize,workspace"
+                    alt="Organized Workspace" />
+                <p>Plan tasks effectively and maintain a clutter-free environment.</p>
+                <button onclick="openChecklist('Be More Organized')">
+                    Checklist
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="popup">
+        <h2 id="popup-title">Checklist</h2>
+        <ul id="checklist"></ul>
+        <button onclick="closePopup()">Done</button>
+    </div>
+
+    <button id="back-to-top" onclick="scrollToTop()">&#8679;</button>
+
+    <footer>
+        <p>© 2025 by Sana Khuram. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const checklistItems = {
+            'Prioritize Mental Health': [
+                'Meditate for 10 minutes',
+                'Journal thoughts and feelings',
+                'Schedule therapy session',
+            ],
+            'Stay Physically Active': [
+                'Go for a 30-minute walk',
+                'Complete workout routine',
+                'Stretch for 15 minutes',
+            ],
+            'Improve Financial Habits': [
+                'Track daily expenses',
+                'Review monthly budget',
+                'Set aside money for savings',
+            ],
+            'Eat Healthier': [
+                'Prepare a balanced meal',
+                'Drink 8 glasses of water',
+                'Include fruits and vegetables in diet',
+            ],
+            'Learn Something New': [
+                'Enroll in an online course',
+                'Read a chapter of a book',
+                'Practice a new skill for 30 minutes',
+            ],
+            'Reduce Screen Time': [
+                'Limit social media use to 1 hour',
+                'Take a screen-free break every hour',
+                'Read a physical book instead of using a device',
+            ],
+            'Travel More': [
+                'Plan a weekend getaway',
+                'Research a new destination',
+                'Book tickets for an upcoming trip',
+            ],
+            'Be More Organized': [
+                'Organize work desk',
+                'Create a to-do list for the day',
+                'Declutter a specific area at home',
+            ],
+        };
+
+        function openChecklist(resolutionTitle) {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById(
+                'popup-title'
+            ).innerText = `${resolutionTitle} Checklist`;
+            const checklistUl = document.getElementById('checklist');
+            checklistUl.innerHTML = '';
+
+            checklistItems[resolutionTitle].forEach((item) => {
+                const li = document.createElement('li');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.onchange = updateProgress;
+                li.appendChild(checkbox);
+                li.appendChild(document.createTextNode(item));
+                checklistUl.appendChild(li);
+            });
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function updateProgress() {
+            const checklist = document.querySelectorAll(
+                '#popup input[type="checkbox"]'
+            );
+            const checked = [...checklist].filter((input) => input.checked).length;
+            const progress = (checked / checklist.length) * 100;
+            console.log(`Progress: ${progress}%`);
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.onscroll = function () {
+            document.getElementById('back-to-top').style.display =
+                window.scrollY > 300 ? 'block' : 'none';
+        };
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
 </body>
 
 </html>
