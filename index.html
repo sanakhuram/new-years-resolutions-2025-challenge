@@ -166,6 +166,7 @@
         #popup button:hover {
             background: #6a0dad;
         }
+
         a {
             text-decoration: none;
             color: white;
@@ -209,10 +210,10 @@
             transition: background 0.3s ease, transform 0.3s ease;
         }
 
-button:hover {
-  transform: scale(1.1) rotate(-2deg);
-  background: linear-gradient(45deg, #f9a602, #ff7eb3);
-}
+        button:hover {
+            transform: scale(1.1) rotate(-2deg);
+            background: linear-gradient(45deg, #f9a602, #ff7eb3);
+        }
 
 
 
@@ -242,7 +243,8 @@ button:hover {
                 padding: 8px 12px;
                 font-size: 0.8em;
             }
-            header h1{
+
+            header h1 {
                 font-size: 20px;
             }
         }
@@ -275,71 +277,74 @@ button:hover {
             background: #222;
             color: white;
         }
+
         .bubble-container {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    z-index: -1; /* Ensure bubbles appear behind the bio content */
-}
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            z-index: -1;
+            /* Ensure bubbles appear behind the bio content */
+        }
 
-.bubble {
-    position: absolute;
-    bottom: -100px;
-    width: 20px;
-    height: 20px;
-    background: radial-gradient(circle, #ffafcc, #ffc8dd, #bde0fe);
-    border-radius: 50%;
-    animation: float 5s infinite ease-in-out;
-    opacity: 0.8;
-}
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #ffafcc, #ffc8dd, #bde0fe);
+            border-radius: 50%;
+            animation: float 5s infinite ease-in-out;
+            opacity: 0.8;
+        }
 
-.bubble:nth-child(2) {
-    width: 30px;
-    height: 30px;
-    left: 25%;
-    animation-duration: 7s;
-    animation-delay: 1s;
-}
+        .bubble:nth-child(2) {
+            width: 30px;
+            height: 30px;
+            left: 25%;
+            animation-duration: 7s;
+            animation-delay: 1s;
+        }
 
-.bubble:nth-child(3) {
-    width: 25px;
-    height: 25px;
-    left: 50%;
-    animation-duration: 6s;
-    animation-delay: 2s;
-}
+        .bubble:nth-child(3) {
+            width: 25px;
+            height: 25px;
+            left: 50%;
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
 
-.bubble:nth-child(4) {
-    width: 35px;
-    height: 35px;
-    left: 75%;
-    animation-duration: 8s;
-    animation-delay: 3s;
-}
+        .bubble:nth-child(4) {
+            width: 35px;
+            height: 35px;
+            left: 75%;
+            animation-duration: 8s;
+            animation-delay: 3s;
+        }
 
-.bubble:nth-child(5) {
-    width: 15px;
-    height: 15px;
-    left: 10%;
-    animation-duration: 4s;
-    animation-delay: 4s;
-}
+        .bubble:nth-child(5) {
+            width: 15px;
+            height: 15px;
+            left: 10%;
+            animation-duration: 4s;
+            animation-delay: 4s;
+        }
 
-@keyframes float {
-    0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-400px) scale(1.2);
-        opacity: 0;
-    }
-}
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.8;
+            }
 
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-400px) scale(1.2);
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
@@ -349,23 +354,23 @@ button:hover {
     </header>
 
     <div class="layout">
-<div class="bio">
-    <div class="bubble-container">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
-    <img src="/sana.jpg" alt="Sana Khuram" />
-    <h2>About Me <i class="fas fa-user"></i></h2>
-    <p>
-        <strong>Sana Khuram</strong>, a passionate <i class="fas fa-laptop-code"></i> Front-end developer from
-        Trondheim, Norway.
-    </p>
-    <a href="https://portfolio-sanakh.netlify.app/" target="_blank">Visit My Profile</a>
-    
-</div>
+        <div class="bio">
+            <div class="bubble-container">
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+                <div class="bubble"></div>
+            </div>
+            <img src="/sana.jpg" alt="Sana Khuram" />
+            <h2>About Me <i class="fas fa-user"></i></h2>
+            <p>
+                <strong>Sana Khuram</strong>, a passionate <i class="fas fa-laptop-code"></i> Front-end developer from
+                Trondheim, Norway.
+            </p>
+            <a href="https://portfolio-sanakh.netlify.app/" target="_blank">Visit My Profile</a>
+
+        </div>
 
 
         <div class="resolutions">
@@ -460,6 +465,31 @@ button:hover {
                 </button>
             </div>
             <div class="resolution">
+    <h2>
+        <i class="fas fa-paint-brush"></i>
+        <a href="https://www.researchgate.net/publication/258820288_03_Arts_and_Crafts_miniature_painting" target="_blank">miniature paintings</a>
+    </h2>
+    <img src="https://images.pexels.com/photos/5800235/pexels-photo-5800235.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?art,craft"
+        alt="Pending Projects" />
+    <p>
+        Finish all pending projects of miniature painting.
+    </p>
+    <button onclick="openChecklist('Complete Pending Projects')">Checklist</button>
+</div>
+<div class="resolution">
+    <h2>
+        <i class="fas fa-code"></i>
+        <a href="https://www.shecodes.io/" target="_blank">Learn Front-End Development</a>
+    </h2>
+    <img src="https://images.pexels.com/photos/1089440/pexels-photo-1089440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/300x200/?coding,learning"
+        alt="Front-End Development" />
+    <p>
+        Explore frameworks, deepen JavaScript knowledge, and practice to master front-end skills.
+    </p>
+    <button onclick="openChecklist('Learn Front-End Development')">Checklist</button>
+</div>
+
+            <div class="resolution">
                 <h2>
                     <i class="fas fa-plane"></i>
                     <a href="https://www.lonelyplanet.com/" target="_blank">Travel More</a>
@@ -542,6 +572,18 @@ button:hover {
                 'Create a to-do list for the day',
                 'Declutter a specific area at home',
             ],
+                'Complete Pending Projects': [
+        'Finish sewing projects',
+        'Complete miniature painting',
+        'Work on stitching designs',
+        'Finalize ongoing arts',
+    ],
+    'Learn Front-End Development': [
+        'Study a new JavaScript framework',
+        'Complete a coding challenge',
+        'Build a small web project',
+        'Revise JavaScript concepts',
+    ],
         };
 
         function openChecklist(resolutionTitle) {
