@@ -24,10 +24,6 @@ A vibrant, interactive webpage to track and celebrate your New Year's resolution
 - **💻 JavaScript:** To handle interactivity like the checklist and back-to-top button.
 - **⭐ Font Awesome:** For icons enhancing visual appeal.
 
-## 📸 Screenshots
- 
-*A sneak peek of the webpage design.*
-
 ## 🚀 Getting Started
 
 1. 🛠️ Clone the repository:
@@ -36,7 +32,7 @@ A vibrant, interactive webpage to track and celebrate your New Year's resolution
    ```
 2. 📂 Navigate to the project directory:
    ```bash
-   cd new-years-resolutions-2025
+   cd new-years-resolutions-2025-challenge
    ```
 3. 🌐 Open `index.html` in your browser to view the webpage.
 
