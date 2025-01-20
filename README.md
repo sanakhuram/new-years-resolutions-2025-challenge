@@ -1,5 +1,8 @@
 # 🥂 New Year's Resolutions 2025
 
+## Live View
+https://sanakhuram.github.io/new-years-resolutions-2025-challenge/
+
 A vibrant, interactive webpage to track and celebrate your New Year's resolutions! This project was created for the [SheCodes New Year’s Resolutions Challenge](https://www.shecodes.io/contests/new-year-s-resolutions-challenge). 🎉✨
 
 ## 🌟 Features
